@@ -1,0 +1,15 @@
+.tabun{
+    margin: 1%;
+    color: white;
+}
+
+.cont_tab{
+background: linear-gradient(to left, #F36F21, #049D97,#352259);
+border-radius: 20px;
+margin: 1.5%;
+height: 4vh;
+}
+
+.bb{
+    background: linear-gradient(to left, #049D97,#352259);
+}

@@ -1,0 +1,67 @@
+<br>
+<app-sous-nav-liste-ensg></app-sous-nav-liste-ensg>
+
+<!-- RECHERCHE -->
+<div class="cont-rech">
+    <div class="form-group mx-sm-3 mb-2" class="rechercher">
+      <input type="text" class="form-control a" id="ici" placeholder="Rechercher..." [(ngModel)]="searchTerm" (input)="onSearch()">
+    </div>
+  </div>
+<!-- FIN RECHERCHE -->  
+  
+<div class="body">
+  <table class="table">
+      <tr class="first-ligne">
+        <th scope="col">Nom & Prénom</th>
+        <th scope="col">Grade</th>
+        <th scope="col">Adresse E-Mail</th>
+        <th scope="col"></th>
+        <th scope="col">Profil Linkedin</th>
+        <th scope="col">Voir Plus</th>
+      </tr> <br>
+
+      <!-- Contenu de les seconds lignes -->
+
+      <ng-container *ngFor="let enseignant of enseignants; let isLast = last; index as i">
+        <tr [ngClass]="i % 2 === 0 ? 'other-ligne' : 'other-lignen'">
+            <td>{{ enseignant.nomPrenom }}</td>
+            <td>{{ enseignant.grade }}</td>
+            <td>{{ enseignant.email }}</td>
+            <td>
+                <a [href]="'mailto:' + enseignant.email" target="_blank" style="background-color: transparent !important;">
+                    <img src="../../assets/Contenu ENSG/mail.png" height="40px" style="padding: 3px;">
+                </a>
+            </td>
+            <td>
+                <a [href]=" enseignant.linkedin " style="background-color: transparent; margin: 0%; padding: 0%;" target="_blank">
+                    <img src="../../assets/Contenu Anc-Diplome/Linkedin.png" height="30px" alt="">
+                </a>    
+            </td>
+            <td>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" [attr.data-bs-target]="'#exampleModal-' + i" style="background-color: transparent !important; border-color: transparent;padding: 0%;">
+                    <img src="../../assets/Contenu ENSG/Voir Plus.png" alt="Voir Plus" height="30px" (click)="toggleDescription(i); rotateImage(i)" [class.rotate]="true" [class.rotated]="rotatedStates[i]"> 
+                </button>
+    
+                <!-- Modal -->
+                <div class="modal fade" [id]="'exampleModal-' + i" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" style="background-color: transparent !important;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">{{ enseignant.nomPrenom }}</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="rotateImage(i)" [class.rotate]="true"></button>
+                            </div>
+                            <div class="modal-body cont_modal"> <div *ngFor="let j of enseignant.description"> {{j}} </div> </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="rotateImage(i)" [class.rotate]="true" style="background: linear-gradient(to right,#049D97, #352259);">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <br *ngIf="!isLast">
+    </ng-container>
+    
+  </table>
+</div>

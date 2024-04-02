@@ -1,0 +1,14 @@
+.cont-button{
+    display: flex;
+    justify-content: center;
+}
+.btn-outline-info:hover {
+    background: linear-gradient(to right, #049D97,#352259);
+    border-color: #049D97; 
+    color: #ffffff;
+}
+
+.btn-outline-info {
+    color: #049D97; /* Couleur du texte */
+    border-color: #049D97; /* Couleur de la bordure */
+}

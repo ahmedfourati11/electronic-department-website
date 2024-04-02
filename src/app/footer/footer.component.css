@@ -1,0 +1,24 @@
+.body{
+    margin-bottom: 0%;
+}
+
+.back-G{
+    width: 100%;
+    background: linear-gradient(to right, #F36F21,#049D97, #049D97, #352259);
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+.icon {
+    display: inline-block;
+
+    z-index: 1;
+    background-image: url('../../assets/mail.png'); /* Remplacez 'chemin/vers/votre/image.png' par le chemin de votre image */
+    background-size: cover;
+    margin-right: 10px; /* Ajoutez un espace entre l'icône et le texte */
+}
+
+a{
+    text-decoration: none;
+}

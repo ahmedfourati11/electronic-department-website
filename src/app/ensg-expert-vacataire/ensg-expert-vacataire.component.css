@@ -1,0 +1,100 @@
+.body {
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    background-color: transparent !important;
+}
+
+.table {
+    width: 80%;
+}
+
+.other-lignen {
+    background: linear-gradient(to left, #F36F21, #049D97, #352259);
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+.other-lignen td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.other-lignen td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* sakaranaa */
+
+.first-ligne {
+    background: linear-gradient(to left, #F36F21, #049D97, #352259);
+    text-align: center;
+    color: white;
+}
+
+.first-ligne th:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.first-ligne th:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Other Ligne */
+
+.other-ligne .other-lignen td {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.other-ligne {
+    background: linear-gradient(to left,#049D97,#049D97, #352259);
+    text-align: center;
+    color: white;
+}
+
+.other-ligne td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.other-ligne td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* rotation du fléche */
+.rotate {
+    transition: transform 0.3s ease;
+}
+
+.rotated {
+    transform: rotate(180deg);
+  }
+
+/* Barre De Recherche */
+
+.cont-rech{ 
+    display: flex; 
+    justify-content: center;
+    margin-top: 2%;
+    z-index: 1;
+    border-color: #049D97;
+}
+
+.rechercher{
+    z-index: 1;
+    width: 40%;
+}
+
+.cont_modal{
+    text-align: start;
+}

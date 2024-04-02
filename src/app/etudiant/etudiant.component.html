@@ -1,0 +1,53 @@
+<div class="compContainer">
+    <div class="form-container">
+
+        <div style="display: flex; justify-content: center;"> 
+            <div class="container-logo text-center mb-4">
+                <img src="../assets/logo_DE-01.png" alt="LOGO DE" class="logo">
+            </div>
+        </div>  
+
+<div [formGroup]="form">
+        <form class="row g-3" action="javascript:void(0)" (submit)="send()">
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label c"><b>Nom et Prénom</b></label>
+                <input formControlName="nom_prenom" type="text" class="form-control" id="nom" placeholder="Veuillez Entrer Votre Nom et Prénom" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label c"><b>Adress Email</b></label>
+                <input type="email" class="form-control" id="adress_email" placeholder="Veuillez Entrer Votre Adress Email" required formControlName="add_mail">
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label for="inputState" class="form-label c"><b>Classe</b></label>
+                <select id="inputState" class="form-select" required formControlName="classe">
+                    <option value="" disabled selected>Choisissez Votre Classe</option>
+                    <option value="1ére année licence">1ére année licence</option>
+                    <option value="2éme année licence">2éme année licence</option>
+                    <option value="3éme année licence">3éme année licence</option>
+                    <option value="1ére année Master">1ére année Master</option>
+                    <option value="2éme année Master">2éme année Master</option>
+                    <option value="1ére année GEC">1ére année GEC</option>
+                    <option value="2éme année GEC">2éme année GEC</option>
+                    <option value="3éme année GEC">3éme année GEC</option>
+                </select>
+            </div>
+            
+
+            <div class="col-md-8 mb-3">
+                <label class="form-label c"><b>Réclamations / Propositions / Demandes</b></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Si vous avez des réclamations , des propositions ou des demandes, n'hésitez pas à les écrire. Votre avis nous intéresse." required formControlName="message"></textarea>
+            </div>
+
+<br>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary"><b>Soumettre</b></button>
+             </div>
+
+        </form>
+</div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<br>
+<app-sous-navbar></app-sous-navbar>
+
+
+<div class="compContainer">
+    <div class="form-container">
+
+        <div style="display: flex; justify-content: center;"> 
+            <div class="container-logo text-center mb-4">
+                <img src="../assets/logo_DE-01.png" alt="LOGO DE" class="logo">
+            </div>
+        </div>  
+<div [formGroup]="form">
+        <form class="row g-3" action="javascript:void(0)" (submit)="send()">
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label c"> <b>Nom et Prénom</b></label>
+                <input type="text" class="form-control" id="nom" placeholder="Veuillez Entrer Votre Nom et Prénom" required formControlName="nom_prenom">
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label c"><b>Adresse E-mail</b></label>
+                <input type="email" class="form-control" id="prenom" placeholder="Veuillez Entrer Votre Adresse E-mail" required formControlName="add_mail">
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label for="inputState" class="form-label c"><b>Sujet Concerné</b></label>
+                <select id="inputState" class="form-select" required formControlName="sujet">
+                    <option value="" disabled [selected]="true">Choisissez Le Sujet Concerné</option>
+                    <option value="Demande">Demande</option>
+                    <option value="Proposition">Proposition</option>
+                    <option value="Réclamation">Réclamation</option>
+                </select>
+            </div>
+                       
+
+            <div class="col-md-8 mb-3">
+                <label class="form-label c"><b>Demande / Proposition / Réclamation</b></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Si vous avez des demandes, des propositions ou des réclamations, n'hésitez pas à les écrire. Votre avis nous intéresse." required formControlName="message"></textarea>
+            </div>
+<br>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary"><b>Soumettre</b></button>
+             </div>
+
+        </form>
+</div>
+    </div>
+</div>

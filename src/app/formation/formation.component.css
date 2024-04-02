@@ -1,0 +1,43 @@
+.body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    padding: 0%;
+    margin: 0%;
+}
+.separation{
+    width: 50%;
+}
+
+.abcd{
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.titre{
+    margin: 0%;
+    width: 45%;
+}
+
+.abcl{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+
+.abc{
+    display: flex;
+    justify-content: center;
+    width:50%;
+    height: 100%;
+}
+
+.abccc{
+    width: 80%;
+}
+
+
+

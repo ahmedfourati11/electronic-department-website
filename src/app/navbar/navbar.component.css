@@ -1,0 +1,10 @@
+.btn-outline-info:hover {
+    background: linear-gradient(to right, #049D97,#352259);
+    border-color: #049D97; 
+    color: #ffffff;
+}
+
+.btn-outline-info {
+    color: #049D97; 
+    border-color: #049D97; 
+}

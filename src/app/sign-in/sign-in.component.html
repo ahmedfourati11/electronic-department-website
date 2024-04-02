@@ -1,0 +1,29 @@
+<div class="compContainer">
+    <div class="form-container">
+
+        <div style="display: flex;justify-content: center;">
+            <div class="back-logo">
+                <img src="../assets/logo_DE-01.png" alt="IEEE ENET'COM SB" class="logo">
+            </div>
+        </div>
+
+        <br>
+        <form class="">
+            <div class="mb-3">
+                <label for="nom_utili" class="form-label c"><b>Adress E-mail</b></label>
+                <input type="email" class="form-control" id="aemail" placeholder="Veuillez entrer votre Adress E-mail" >
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label c"><b>Mot De Passe</b></label>
+                <input type="password" class="form-control" id="password" placeholder="Veuillez entrer votre Mot de passe">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary button" (click)="verifier($event)"><b>Soumettre</b></button>
+        </form>
+    </div>
+
+
+    <video id="robot-video" width="470" height="500" autoplay>
+        <source src="../../assets/Robot.mp4" type="video/mp4">
+    </video>
+</div>

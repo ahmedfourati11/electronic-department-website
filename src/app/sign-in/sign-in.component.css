@@ -1,0 +1,51 @@
+.compContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.form-container {
+    background: linear-gradient(to left, #049D97,#049D97,#352259);
+    padding: 60px; /* Augmenter le padding autour du formulaire */
+    border-radius: 10px;
+    text-align: center;
+    width: 35%;
+    margin: 2%;
+}
+
+.c{
+    color: white;
+}
+
+.back-logo{
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 210px;
+    height: 100px;  
+}
+
+/* Modification de la couleur du bouton "Submit" */
+.form-container button[type="submit"].btn-primary {
+    background: linear-gradient(to left, #049D97,#352259);
+    /* background-color: #049d97; */
+    border-color: #352259;
+}
+
+.btn{
+    width: 45%
+}
+
+#robot-video {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}

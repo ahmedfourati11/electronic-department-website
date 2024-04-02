@@ -1,0 +1,42 @@
+.compContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    background: linear-gradient(to left,#F36F21, #049D97,#049D97,#352259);
+    padding: 60px; 
+    border-radius: 10px;
+    width: 70%;
+    margin: 2%;
+}
+
+.container-logo{
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 45%;
+    border-radius: 10px;
+}
+
+.logo {
+    width: 210px;
+    height: 100px;  
+}
+
+.c{
+    color: white;
+}
+
+
+.form-container button[type="submit"].btn-primary {
+    background: linear-gradient(to left, #049D97,#352259);
+    border-color: #352259;
+}
+
+.btn{
+    width: 30%
+}
+
+.col-12 {
+    text-align: center;
+    margin-top: 3%;
+}

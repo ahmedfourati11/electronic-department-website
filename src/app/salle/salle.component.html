@@ -1,0 +1,56 @@
+<div class="body">
+    <table class="table">
+        <tr class="first-ligne">
+          <th scope="col">Salle</th>
+          <th scope="col">Désignations Des Matériels</th>
+          <th scope="col">Quantité</th>
+          <th scope="col">Remarques <br> Logiciels</th>
+          <th scope="col">Voir Plus</th>
+        </tr> <br>
+  
+        <!-- Contenu de les seconds lignes -->
+  
+        <ng-container *ngFor="let salle of salles; let isLast = last; index as i">
+          <tr [ngClass]="i % 2 === 0 ? 'other-ligne' : 'other-lignen'">
+            <td style="width: 20%; padding: 2%;" > <div class="j" *ngFor="let j of salle.noms" style="background-color: transparent !important; color: white;"> {{j}} </div>
+            </td>
+
+            <td style="margin: 5%; text-align: start;"><div class="j" *ngFor="let j of salle.materiel" style="background-color: transparent !important; color: white;"> {{j}} </div>
+            </td>
+
+            <td><div class="j" *ngFor="let j of salle.quantite" style="background-color: transparent !important; color: white;"> {{j}} </div>
+            </td>
+              
+            <td><div class="j" *ngFor="let j of salle.rqetlog" style="background-color: transparent !important; color: white; margin: 0%;"> {{j}} </div></td>
+            <td *ngIf="salle.description == ''"></td>
+            <td *ngIf="salle.description != ''">
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" [attr.data-bs-target]="'#exampleModal-' + i" style="background-color: transparent !important; border-color: transparent;padding: 0%;">
+                      <img src="../../assets/Contenu ENSG/Voir Plus.png" alt="Voir Plus" height="30px" (click)="toggleDescription(i); rotateImage(i)" [class.rotate]="true" [class.rotated]="rotatedStates[i]"> 
+                  </button>
+      
+                  <!-- Modal -->
+                  <div class="modal fade" [id]="'exampleModal-' + i" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" style="background-color: transparent !important;">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel" style="display: flex; justify-content: center; padding: 3%;">{{ salle.noms }} </h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="rotateImage(i)" [class.rotate]="true"></button>
+                              </div>
+                              <div class="modal-body cont_modal" style="text-align: start;"> <div *ngFor="let j of salle.description"> {{j}} </div> </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="rotateImage(i)" [class.rotate]="true" style="background: linear-gradient(to right,#049D97, #352259);">Fermer</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+            </td>
+          </tr>
+          <br *ngIf="!isLast">
+      </ng-container>
+      
+    </table>
+</div>
+
+
+

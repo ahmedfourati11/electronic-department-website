@@ -1,0 +1,34 @@
+<br>
+<app-sous-navbar></app-sous-navbar>
+<br>
+
+<div class="body">
+
+      <table class="table">
+          
+          <tr class="first-ligne">
+              <th scope="col">Classe</th>
+              <th scope="col">Adresse E-Mail Du Groupe</th>
+              <th scope="col">Appuyez Pour Envoyer l'E-Mail.</th>
+          </tr> <br>
+          
+          <!-- Contenu de les seconds lignes -->
+
+          <ng-container *ngFor="let groupe of groupes; let isLast = last; index as i">
+            <tr [ngClass]="i % 2 === 0 ? 'other-ligne' : 'other-lignen'">
+                <td>{{ groupe.classe }}</td>
+                <td>{{ groupe.email }}</td>
+                <td>
+                    <a [href]="'mailto:' + groupe.email" target="_blank" style="background-color: transparent !important;"> 
+                        <img src="../../assets/Contenu ENSG/mail.png" height="40px" style="padding: 3px;">
+                    </a>
+                </td>
+
+            </tr>
+            <br *ngIf="!isLast">
+        </ng-container>
+
+<br>
+
+      </table>
+</div>

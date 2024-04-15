@@ -3,13 +3,12 @@ import { SousNavbarComponent } from '../sous-navbar/sous-navbar.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { DemObsRecComponent } from '../dem-obs-rec/dem-obs-rec.component';
-import { PvReuDepComponent } from '../pv-reu-dep/pv-reu-dep.component';
-import { PvAutreComponent } from '../pv-autre/pv-autre.component';
+
 
 @Component({
   selector: 'app-pre-ins',
   standalone: true,
-  imports: [SousNavbarComponent,CommonModule,RouterModule,DemObsRecComponent,PvReuDepComponent,PvAutreComponent],
+  imports: [SousNavbarComponent,CommonModule,RouterModule,DemObsRecComponent],
   templateUrl: './pre-ins.component.html',
   styleUrl: './pre-ins.component.css'
 })

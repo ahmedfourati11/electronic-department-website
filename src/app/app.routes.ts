@@ -10,8 +10,6 @@ import { EtudiantComponent } from './etudiant/etudiant.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { PreInsComponent } from './pre-ins/pre-ins.component';
 import { DemObsRecComponent } from './dem-obs-rec/dem-obs-rec.component';
-import { PvReuDepComponent } from './pv-reu-dep/pv-reu-dep.component';
-import { PvAutreComponent } from './pv-autre/pv-autre.component';
 import { Component } from '@angular/core';
 import { EnsgExpertVacataireComponent } from './ensg-expert-vacataire/ensg-expert-vacataire.component';
 
@@ -28,7 +26,5 @@ export const routes: Routes = [
     {path:"sign_in",component:SignInComponent},
     {path:"pre-ins",component:PreInsComponent},
     {path:"dem-obs-rec",component:DemObsRecComponent},
-    {path:"PV_Reunion_DE",component:PvReuDepComponent},
-    {path:"PV_Autre_Reunion",component:PvAutreComponent},
     {path:"enseignants-Vacataire-expert",component:EnsgExpertVacataireComponent}
 ];

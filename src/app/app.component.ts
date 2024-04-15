@@ -17,8 +17,6 @@ import { PreInsComponent } from './pre-ins/pre-ins.component';
 import { SousNavbarComponent } from './sous-navbar/sous-navbar.component';
 import { DemObsRecComponent } from './dem-obs-rec/dem-obs-rec.component';
 import { FormsModule } from '@angular/forms';
-import { PvAutreComponent } from './pv-autre/pv-autre.component';
-import { PvReuDepComponent } from './pv-reu-dep/pv-reu-dep.component';
 import { SousNavListeEnsgComponent } from './sous-nav-liste-ensg/sous-nav-liste-ensg.component';
 import { EnsgExpertVacataireComponent } from './ensg-expert-vacataire/ensg-expert-vacataire.component';
 
@@ -26,7 +24,7 @@ import { EnsgExpertVacataireComponent } from './ensg-expert-vacataire/ensg-exper
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,NavbarComponent,FooterComponent,DepartementComponent,FormationComponent,SalleComponent,EnseignantsComponent,ActualitesComponent,PartenairesComponent,AncDipComponent,EtudiantComponent,SignInComponent,VerifVisageComponent,PreInsComponent,SousNavbarComponent,DemObsRecComponent,FormsModule,CommonModule,PvAutreComponent,PvReuDepComponent,SousNavListeEnsgComponent,EnsgExpertVacataireComponent],
+  imports: [CommonModule, RouterOutlet,NavbarComponent,FooterComponent,DepartementComponent,FormationComponent,SalleComponent,EnseignantsComponent,ActualitesComponent,PartenairesComponent,AncDipComponent,EtudiantComponent,SignInComponent,VerifVisageComponent,PreInsComponent,SousNavbarComponent,DemObsRecComponent,FormsModule,CommonModule,SousNavListeEnsgComponent,EnsgExpertVacataireComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

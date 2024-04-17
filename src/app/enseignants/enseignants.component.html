@@ -32,11 +32,16 @@
                     <img src="../../assets/Contenu ENSG/mail.png" height="40px" style="padding: 3px;">
                 </a>
             </td>
-            <td>
+            <td *ngIf="enseignant.linkedin !== ''">
                 <a [href]="enseignant.linkedin" style="background-color: transparent; margin: 0%; padding: 0%;" target="_blank">
                     <img src="../../assets/Contenu Anc-Diplome/Linkedin.png" height="30px" alt="">
                 </a>    
             </td>
+            
+            <td *ngIf="enseignant.linkedin == ''">
+                    <img src="../../assets/Contenu Anc-Diplome/Linkedin.png" height="45px" alt="">    
+            </td>
+            
             <td>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" [attr.data-bs-target]="'#exampleModal-' + i" style="background-color: transparent !important; border-color: transparent;padding: 0%;">
